@@ -20,7 +20,7 @@ class OrderServiceImplTest {
         memberService.join(member);
 
         Order order = orderService.create(memberId, "itemA", 10000);
-        assertThat(order.getDiscountPrice()).isEqualTo(9000);
+        assertThat(order.calculatePrice()).isEqualTo(9000);
     }
 
 }
